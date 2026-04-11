@@ -26,7 +26,7 @@
 .company-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(44, 82, 160, 0.6), rgba(0, 100, 120, 0.55));
+  background: linear-gradient(135deg, rgba(44, 82, 160, 0.35), rgba(0, 100, 120, 0.4));
   z-index: 1;
 }
 
