@@ -3,7 +3,7 @@
    ============================================ */
 
 .reskill-hero {
-  background: linear-gradient(135deg, rgba(224, 123, 155, 0.9), rgba(0, 180, 162, 0.9));
+  position: relative;
   padding: 60px 16px;
   text-align: center;
   color: var(--color-white);
@@ -11,6 +11,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.reskill-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.reskill-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(200, 90, 130, 0.55), rgba(0, 150, 136, 0.5));
+  z-index: 1;
+}
+
+.reskill-hero__content {
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -24,6 +45,7 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -34,9 +56,10 @@
 
 .reskill-hero__sub {
   font-size: 15px;
-  opacity: 0.9;
+  opacity: 0.95;
   max-width: 600px;
   margin: 0 auto;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Course Cards --- */

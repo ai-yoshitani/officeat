@@ -4,7 +4,7 @@
 
 /* --- Hero --- */
 .company-hero {
-  background: linear-gradient(135deg, rgba(91, 127, 214, 0.9), rgba(0, 143, 128, 0.9));
+  position: relative;
   padding: 60px 16px;
   text-align: center;
   color: var(--color-white);
@@ -12,6 +12,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.company-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.company-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(44, 82, 160, 0.6), rgba(0, 100, 120, 0.55));
+  z-index: 1;
+}
+
+.company-hero__content {
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -25,6 +46,7 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -36,10 +58,11 @@
 .company-hero__sub {
   font-size: 15px;
   margin-bottom: 32px;
-  opacity: 0.9;
+  opacity: 0.95;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Check List --- */
