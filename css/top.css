@@ -438,21 +438,71 @@
   margin-bottom: 16px;
 }
 
-.voice-card::before {
-  content: '\201C';
-  font-size: 48px;
-  color: var(--color-primary);
-  opacity: 0.3;
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  line-height: 1;
+.voice-card__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.voice-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.voice-card__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.voice-card__icon--female {
+  background-color: #f8e1eb;
+  color: #d4638a;
+}
+
+.voice-card__icon--biz {
+  background-color: #dbeafe;
+  color: #3b6fb5;
+}
+
+.voice-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.voice-card__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.voice-card__detail {
+  font-size: 12px;
+  color: var(--color-text-light);
 }
 
 .voice-card__text {
   font-size: 14px;
   line-height: 1.8;
-  padding-left: 8px;
+  padding-left: 60px;
+  position: relative;
+}
+
+.voice-card__text::before {
+  content: '\201C';
+  font-size: 40px;
+  color: var(--color-primary);
+  opacity: 0.3;
+  position: absolute;
+  left: 44px;
+  top: -8px;
+  line-height: 1;
 }
 
 /* --- CTA Band --- */
