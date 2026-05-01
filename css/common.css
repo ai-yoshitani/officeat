@@ -222,6 +222,18 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
   height: 64px;
 }
 
+/* 福岡県ロゴ */
+.header__fukuoka-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header__fukuoka-logo img {
+  height: 36px;
+  width: auto;
+}
+
 .header__logo a {
   font-size: 14px;
   font-weight: 700;
