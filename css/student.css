@@ -215,6 +215,12 @@
   margin-bottom: 8px;
 }
 
+.timeline__date {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-light);
+}
+
 .timeline__desc {
   font-size: 14px;
   color: var(--color-text-light);
