@@ -239,75 +239,106 @@
   text-decoration: underline;
 }
 
-/* --- Program Overview --- */
-.program-overview__cards {
-  display: grid;
-  grid-template-columns: 1fr;
+/* --- Timeline (Program Flow) --- */
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline__item {
+  display: flex;
   gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .program-overview__cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .program-overview__cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.program-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 24px;
+  padding-bottom: 32px;
   position: relative;
 }
 
-.program-card__header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+.timeline__item:last-child {
+  padding-bottom: 0;
 }
 
-.program-card__number {
-  display: inline-flex;
+.timeline__line {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
+  flex-shrink: 0;
+  width: 40px;
+}
+
+.timeline__dot {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: var(--color-primary);
   color: var(--color-white);
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
   font-weight: 700;
   flex-shrink: 0;
 }
 
-.program-card__icon {
-  width: 44px;
-  height: 44px;
-  color: var(--color-primary);
-  flex-shrink: 0;
+.timeline__connector {
+  width: 2px;
+  flex: 1;
+  background-color: var(--color-primary);
+  opacity: 0.3;
+  margin-top: 4px;
 }
 
-.program-card__icon svg {
-  width: 100%;
-  height: 100%;
+.timeline__content {
+  flex: 1;
+  padding-top: 6px;
 }
 
-.program-card__title {
-  font-size: 16px;
+.timeline__title {
+  font-size: 17px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-.program-card__desc {
+.timeline__date {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-light);
+}
+
+.timeline__desc {
   font-size: 14px;
   color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+
+.timeline__list {
+  font-size: 14px;
+  color: var(--color-text-light);
+  padding-left: 1.2em;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline__list li {
+  list-style: disc;
+}
+
+.timeline__list-sub {
+  font-size: 13px;
+  color: var(--color-text-light);
+  opacity: 0.85;
+}
+
+.timeline__img {
+  height: 220px;
+}
+
+.timeline__photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
 /* --- Results --- */
