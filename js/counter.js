@@ -2,36 +2,33 @@
    Counter Animation (IntersectionObserver)
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 
-  function animateCounter(element) {
+  const animateCounter = (element) => {
     const target = parseInt(element.getAttribute('data-target'), 10);
     const duration = 2000;
     const start = performance.now();
 
-    function update(now) {
+    const update = (now) => {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease-out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * target);
-      element.textContent = current.toLocaleString();
-
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      element.textContent = Math.floor(eased * target).toLocaleString();
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
         element.textContent = target.toLocaleString();
       }
-    }
+    };
 
     requestAnimationFrame(update);
-  }
+  };
 
-  var counters = document.querySelectorAll('.js-counter');
-  if (counters.length === 0) return;
+  const counters = document.querySelectorAll('.js-counter');
+  if (!counters.length) return;
 
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         animateCounter(entry.target);
         observer.unobserve(entry.target);
@@ -39,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.5 });
 
-  counters.forEach(function (counter) {
-    observer.observe(counter);
-  });
+  counters.forEach(counter => observer.observe(counter));
 
 });

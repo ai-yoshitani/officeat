@@ -2,7 +2,7 @@
    Common JavaScript
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 
   /* --- Hamburger Menu --- */
   const hamburger = document.querySelector('.hamburger');
@@ -16,9 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close menu on link click
-    mobileMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
         hamburger.classList.remove('is-active');
         mobileMenu.classList.remove('is-open');
         hamburger.setAttribute('aria-expanded', 'false');
@@ -30,32 +29,28 @@ document.addEventListener('DOMContentLoaded', function () {
   /* --- Header Scroll Shadow --- */
   const header = document.querySelector('.header');
   if (header) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 10) {
-        header.classList.add('header--shadow');
-      } else {
-        header.classList.remove('header--shadow');
-      }
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('header--shadow', window.scrollY > 10);
     });
   }
 
   /* --- Smooth Scroll --- */
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const targetId = anchor.getAttribute('href');
       if (targetId === '#') return;
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
         const headerHeight = header ? header.offsetHeight : 0;
         const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
 
   /* --- FAQ Accordion --- */
-  document.querySelectorAll('.faq__question').forEach(function (btn) {
+  document.querySelectorAll('.faq__question').forEach(btn => {
     btn.addEventListener('click', function () {
       const item = this.closest('.faq__item');
       const isOpen = item.classList.toggle('is-open');
@@ -64,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* --- Form Alert (Dummy) --- */
-  document.querySelectorAll('.js-dummy-form').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
+  document.querySelectorAll('.js-dummy-form').forEach(form => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
       alert('※この仮フォームは送信されません。実際の運用時はGoogleフォーム等に置き換えてください。');
     });

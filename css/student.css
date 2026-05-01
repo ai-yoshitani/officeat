@@ -621,3 +621,84 @@
   width: 100%;
   max-width: 240px;
 }
+
+/* --- Draft Meeting Desc --- */
+.draft-meeting__desc {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 32px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.draft-meeting__sub-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* --- Apply Guidance (ご参加を検討される方へ) --- */
+.apply-guidance {
+  max-width: 640px;
+  margin: 0 auto 40px;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+
+.apply-guidance__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.apply-guidance__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.apply-guidance__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.apply-guidance__text {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.apply-guidance__arrow {
+  color: var(--color-primary);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.apply-guidance__link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.apply__section-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: -20px;
+}
+
+.apply-card__note {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-top: 12px;
+  line-height: 1.7;
+  text-align: left;
+}

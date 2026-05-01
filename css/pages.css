@@ -305,6 +305,36 @@
   font-size: 16px;
 }
 
+/* --- Contact Lead --- */
+.contact-lead {
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+
+.contact-lead--last {
+  margin-bottom: 32px;
+}
+
+/* --- Static Content Date --- */
+.static-content__date {
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+/* --- Article Placeholder --- */
+.article__placeholder {
+  height: 300px;
+  margin-bottom: 24px;
+}
+
+/* --- Reskill Apply Note --- */
+.reskill-apply__note {
+  margin-bottom: 24px;
+  color: var(--color-text-light);
+}
+
 /* --- Form Page Header --- */
 .form-page-header {
   background-color: var(--color-primary-light);

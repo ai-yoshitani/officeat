@@ -239,8 +239,6 @@
   text-decoration: underline;
 }
 
-/* concept styles → common.css に移動 */
-
 /* --- Program Overview --- */
 .program-overview__cards {
   display: grid;
