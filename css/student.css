@@ -256,6 +256,48 @@
   background: var(--color-bg-gray);
 }
 
+/* --- Community --- */
+.community {
+  background-color: var(--color-primary-light);
+}
+
+.community__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community__tag {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.community__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .community__title {
+    font-size: 22px;
+  }
+}
+
+.community__text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
 /* --- Draft Meeting --- */
 .draft-meeting {
   background-color: var(--color-bg-gray);
