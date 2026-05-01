@@ -231,6 +231,13 @@
   height: 160px;
 }
 
+.timeline__photo {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
 /* --- Draft Meeting --- */
 .draft-meeting {
   background-color: var(--color-bg-gray);
