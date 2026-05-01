@@ -224,6 +224,26 @@
   margin-bottom: 12px;
 }
 
+.timeline__list {
+  font-size: 14px;
+  color: var(--color-text-light);
+  padding-left: 1.2em;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline__list li {
+  list-style: disc;
+}
+
+.timeline__list-sub {
+  font-size: 13px;
+  color: var(--color-text-light);
+  opacity: 0.85;
+}
+
 .timeline__img {
   height: 160px;
 }
