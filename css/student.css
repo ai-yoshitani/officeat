@@ -120,6 +120,10 @@
   .recommend__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .recommend-card--right {
+    grid-column-start: 2;
+  }
 }
 
 .recommend-card {
