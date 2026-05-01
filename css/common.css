@@ -229,8 +229,10 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
 }
 
 .header__fukuoka-logo img {
-  height: 48px;
+  height: 56px;
   width: auto;
+  display: block;
+  border: none;
 }
 
 .header__logo a {
