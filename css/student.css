@@ -55,6 +55,15 @@
   }
 }
 
+.student-hero__brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
 .student-hero__sub {
   font-size: 15px;
   margin-bottom: 32px;
@@ -63,6 +72,41 @@
   margin-left: auto;
   margin-right: auto;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.student-hero__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.student-hero__cta-sub {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn--outline-white {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: var(--color-white);
+  font-size: 14px;
+  padding: 10px 24px;
+}
+
+.btn--outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Spiral Intro --- */
+.spiral-intro__text {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2;
+  color: var(--color-text);
 }
 
 /* --- Recommend --- */
