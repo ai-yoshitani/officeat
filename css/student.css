@@ -602,6 +602,13 @@
   }
 }
 
+.apply__cards--single {
+  grid-template-columns: 1fr;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .apply-card {
   text-align: center;
   background: var(--color-bg-gray);
@@ -648,51 +655,42 @@
 }
 
 /* --- Apply Guidance (ご参加を検討される方へ) --- */
-.apply-guidance {
-  max-width: 640px;
-  margin: 0 auto 40px;
-  background: var(--color-white);
-  border-radius: 12px;
-  padding: 28px 24px;
-}
-
-.apply-guidance__label {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--color-text-light);
-  letter-spacing: 0.08em;
-  margin-bottom: 16px;
-}
-
-.apply-guidance__list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.apply-guidance__item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.apply-guidance__text {
-  font-size: 14px;
-  color: var(--color-text);
-}
-
-.apply-guidance__arrow {
-  color: var(--color-primary);
-  font-size: 16px;
-  flex-shrink: 0;
-}
-
-.apply-guidance__link {
-  font-size: 14px;
+.apply-guidance__heading {
+  font-size: 20px;
   font-weight: 700;
   color: var(--color-primary);
+  text-align: center;
   text-decoration: underline;
+  text-underline-offset: 6px;
+  margin-bottom: 24px;
+}
+
+.apply-guidance__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .apply-guidance__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.apply-guidance-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.apply-guidance-card__voice {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 .apply__section-label {
