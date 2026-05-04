@@ -250,6 +250,13 @@ fieldset.form-group {
   margin-left: 4px;
 }
 
+.form-group__hint {
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="tel"],
