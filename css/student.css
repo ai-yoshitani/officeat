@@ -712,3 +712,29 @@
   line-height: 1.7;
   text-align: left;
 }
+
+/* --- Community Icons --- */
+.community__icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.community__icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.community__icon-svg {
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
+}
+
+.community__icon-label {
+  font-size: 13px;
+  color: var(--color-text-light);
+}
