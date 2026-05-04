@@ -316,6 +316,41 @@
   margin-bottom: 32px;
 }
 
+/* --- Privacy Agreement --- */
+.form-group--privacy {
+  background-color: var(--color-bg-gray);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.form-group__privacy-label {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.form-group__privacy-note {
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.form-group__privacy-note a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+label.form-group__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+}
+
 /* --- Static Content Date --- */
 .static-content__date {
   margin-top: 32px;
