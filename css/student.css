@@ -224,6 +224,16 @@
   margin-bottom: 12px;
 }
 
+.timeline__note {
+  font-size: 13px;
+  color: var(--color-text-light);
+  background-color: var(--color-bg-gray);
+  border-left: 3px solid var(--color-primary);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 0 4px 4px 0;
+}
+
 .timeline__list {
   font-size: 14px;
   color: var(--color-text-light);
