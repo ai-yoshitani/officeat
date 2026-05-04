@@ -54,23 +54,23 @@
       <form class="contact-form js-dummy-form" novalidate>
         <div class="form-group">
           <label for="company">企業名<span class="form-group__required">※必須</span></label>
-          <input type="text" id="company" name="company" required placeholder="例：株式会社〇〇">
+          <input type="text" id="company" name="company" required aria-required="true" placeholder="例：株式会社〇〇">
         </div>
         <div class="form-group">
           <label for="name">担当者名<span class="form-group__required">※必須</span></label>
-          <input type="text" id="name" name="name" required placeholder="例：田中 太郎">
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="例：田中 太郎">
         </div>
         <div class="form-group">
           <label for="email">メールアドレス<span class="form-group__required">※必須</span></label>
-          <input type="email" id="email" name="email" required placeholder="例：tanaka@company.com">
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="例：tanaka@company.com">
         </div>
         <div class="form-group">
           <label for="tel">電話番号<span class="form-group__required">※必須</span></label>
-          <input type="tel" id="tel" name="tel" required placeholder="例：092-123-4567">
+          <input type="tel" id="tel" name="tel" required aria-required="true" placeholder="例：092-123-4567">
         </div>
         <div class="form-group">
           <label for="industry">業種<span class="form-group__required">※必須</span></label>
-          <select id="industry" name="industry" required>
+          <select id="industry" name="industry" required aria-required="true">
             <option value="">選択してください</option>
             <option value="it">IT・通信</option>
             <option value="manufacturing">製造業</option>
@@ -85,7 +85,7 @@
         </div>
         <div class="form-group">
           <label for="employees">従業員数<span class="form-group__required">※必須</span></label>
-          <select id="employees" name="employees" required>
+          <select id="employees" name="employees" required aria-required="true">
             <option value="">選択してください</option>
             <option value="1-10">1〜10名</option>
             <option value="11-50">11〜50名</option>
@@ -96,7 +96,7 @@
         </div>
         <div class="form-group">
           <label for="position">採用予定職種<span class="form-group__required">※必須</span></label>
-          <input type="text" id="position" name="position" required placeholder="例：事務職、エンジニア、マーケティング等">
+          <input type="text" id="position" name="position" required aria-required="true" placeholder="例：事務職、エンジニア、マーケティング等">
         </div>
         <fieldset class="form-group">
           <legend>雇用形態（複数選択可）<span class="form-group__required">※必須</span></legend>
