@@ -271,7 +271,7 @@ fieldset.form-group {
 .form-group textarea:focus {
   border-color: var(--color-primary);
   outline: 2px solid var(--color-primary);
-  outline-offset: -2px;
+  outline-offset: 0;
 }
 
 .form-group textarea {
