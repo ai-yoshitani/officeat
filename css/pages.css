@@ -230,7 +230,14 @@
   margin-bottom: 24px;
 }
 
-.form-group label {
+fieldset.form-group {
+  border: none;
+  padding: 0;
+  min-width: 0;
+}
+
+.form-group label,
+.form-group legend {
   display: block;
   font-size: 14px;
   font-weight: 700;
