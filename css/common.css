@@ -538,7 +538,7 @@ body {
 }
 
 .concept__text {
-  text-align: center;
+  text-align: left;
   max-width: 720px;
   margin: 0 auto 40px;
   color: var(--color-text-light);
