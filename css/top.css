@@ -37,7 +37,7 @@
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.55); /* 旧 0.35。白文字コントラスト確保のため強化 */
   z-index: 1;
 }
 
@@ -63,17 +63,31 @@
 }
 
 .hero__dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 視覚的ドット（12×12px）は::beforeで描画。ボタン自体は24×24pxのタッチ領域を確保 */
+.hero__dot::before {
+  content: '';
+  display: block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.8);
   background: transparent;
-  cursor: pointer;
-  padding: 0;
   transition: background 0.3s;
 }
 
-.hero__dot--active {
+.hero__dot--active::before {
   background: var(--color-white);
 }
 
@@ -133,6 +147,7 @@
   margin-bottom: 16px;
   line-height: 1.4;
   letter-spacing: 0.05em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /* 明るい写真上での可読性補強 */
 }
 
 @media (min-width: 768px) {
@@ -151,6 +166,7 @@
   font-size: 15px;
   margin-bottom: 32px;
   opacity: 0.9;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 768px) {
