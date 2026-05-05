@@ -54,11 +54,11 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero__slider">
-      <div class="hero__slide hero__slide--active" style="background-image: url('img/hero/hero-01.jpg')" aria-hidden="true"></div>
-      <div class="hero__slide" style="background-image: url('img/hero/hero-02.jpg')" aria-hidden="true"></div>
-      <div class="hero__slide" style="background-image: url('img/hero/hero-03.jpg')" aria-hidden="true"></div>
-      <div class="hero__slide" style="background-image: url('img/hero/hero-04.jpg')" aria-hidden="true"></div>
-      <div class="hero__slide" style="background-image: url('img/hero/hero-05.jpg')" aria-hidden="true"></div>
+      <div id="hero-slide-0" class="hero__slide hero__slide--active" style="background-image: url('img/hero/hero-01.jpg')" aria-hidden="true"></div>
+      <div id="hero-slide-1" class="hero__slide" style="background-image: url('img/hero/hero-02.jpg')" aria-hidden="true"></div>
+      <div id="hero-slide-2" class="hero__slide" style="background-image: url('img/hero/hero-03.jpg')" aria-hidden="true"></div>
+      <div id="hero-slide-3" class="hero__slide" style="background-image: url('img/hero/hero-04.jpg')" aria-hidden="true"></div>
+      <div id="hero-slide-4" class="hero__slide" style="background-image: url('img/hero/hero-05.jpg')" aria-hidden="true"></div>
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
@@ -69,12 +69,24 @@
         <a href="company/index.html" class="btn btn--white">企業の方</a>
       </div>
     </div>
-    <div class="hero__dots">
-      <button class="hero__dot hero__dot--active" data-slide="0" aria-label="スライド1"></button>
-      <button class="hero__dot" data-slide="1" aria-label="スライド2"></button>
-      <button class="hero__dot" data-slide="2" aria-label="スライド3"></button>
-      <button class="hero__dot" data-slide="3" aria-label="スライド4"></button>
-      <button class="hero__dot" data-slide="4" aria-label="スライド5"></button>
+    <p class="sr-only" id="hero-slide-status" aria-live="polite" aria-atomic="true"></p>
+    <div class="hero__controls">
+      <div class="hero__dots" role="group" aria-label="スライドナビゲーション">
+        <button class="hero__dot hero__dot--active" data-slide="0" aria-label="スライド1" aria-pressed="true" aria-controls="hero-slide-0"></button>
+        <button class="hero__dot" data-slide="1" aria-label="スライド2" aria-pressed="false" aria-controls="hero-slide-1"></button>
+        <button class="hero__dot" data-slide="2" aria-label="スライド3" aria-pressed="false" aria-controls="hero-slide-2"></button>
+        <button class="hero__dot" data-slide="3" aria-label="スライド4" aria-pressed="false" aria-controls="hero-slide-3"></button>
+        <button class="hero__dot" data-slide="4" aria-label="スライド5" aria-pressed="false" aria-controls="hero-slide-4"></button>
+      </div>
+      <button class="hero__pause" aria-label="スライドショーを一時停止" aria-pressed="false">
+        <svg class="hero__pause-icon hero__pause-icon--pause" aria-hidden="true" focusable="false" viewBox="0 0 16 16" fill="currentColor" width="12" height="12">
+          <rect x="3" y="2" width="4" height="12" rx="1"/>
+          <rect x="9" y="2" width="4" height="12" rx="1"/>
+        </svg>
+        <svg class="hero__pause-icon hero__pause-icon--play" aria-hidden="true" focusable="false" viewBox="0 0 16 16" fill="currentColor" width="12" height="12">
+          <polygon points="3,1 14,8 3,15"/>
+        </svg>
+      </button>
     </div>
   </section>
 
@@ -111,33 +123,33 @@
   <section class="section news" id="news">
     <div class="container">
       <h2 class="section__title">お知らせ</h2>
-      <div class="news__list">
-        <div class="news__item">
+      <ul class="news__list">
+        <li class="news__item">
           <span class="news__date">2026.07.01</span>
           <span class="label label--program">プログラム</span>
-          <span class="news__title"><a href="information/detail.html">第1クール受講生募集を開始しました</a></span>
-        </div>
-        <div class="news__item">
+          <span class="news__title"><a href="information/detail.html?id=20260701">第1クール受講生募集を開始しました</a></span>
+        </li>
+        <li class="news__item">
           <span class="news__date">2026.06.15</span>
           <span class="label label--company">企業向け</span>
-          <span class="news__title"><a href="information/detail.html">第1回ママと女性のドラフト会議 参加企業募集中</a></span>
-        </div>
-        <div class="news__item">
+          <span class="news__title"><a href="information/detail.html?id=20260615">第1回ママと女性のドラフト会議 参加企業募集中</a></span>
+        </li>
+        <li class="news__item">
           <span class="news__date">2026.06.01</span>
           <span class="label label--course">講座</span>
-          <span class="news__title"><a href="information/detail.html">キャリアデザインワークショップ（5月開催）レポート</a></span>
-        </div>
-        <div class="news__item">
+          <span class="news__title"><a href="information/detail.html?id=20260601">キャリアデザインワークショップ（5月開催）レポート</a></span>
+        </li>
+        <li class="news__item">
           <span class="news__date">2026.05.15</span>
           <span class="label label--info">お知らせ</span>
-          <span class="news__title"><a href="information/detail.html">事業専用サイトを公開しました</a></span>
-        </div>
-        <div class="news__item">
+          <span class="news__title"><a href="information/detail.html?id=20260515">事業専用サイトを公開しました</a></span>
+        </li>
+        <li class="news__item">
           <span class="news__date">2026.05.01</span>
           <span class="label label--seminar">セミナー</span>
-          <span class="news__title"><a href="information/detail.html">キャリア・リデザインセミナー＆説明会のご案内</a></span>
-        </div>
-      </div>
+          <span class="news__title"><a href="information/detail.html?id=20260501">キャリア・リデザインセミナー＆説明会のご案内</a></span>
+        </li>
+      </ul>
       <div class="news__more">
         <a href="information/index.html">お知らせ一覧へ &rarr;</a>
       </div>
@@ -156,10 +168,10 @@
   <section class="section" id="flow" style="background-color: var(--color-bg-gray);">
     <div class="container">
       <h2 class="section__title">プログラムの流れ</h2>
-      <div class="timeline">
-        <div class="timeline__item">
+      <ol class="timeline">
+        <li class="timeline__item">
           <div class="timeline__line">
-            <div class="timeline__dot">STEP1</div>
+            <div class="timeline__dot" lang="en">STEP1</div>
             <div class="timeline__connector"></div>
           </div>
           <div class="timeline__content">
@@ -167,10 +179,10 @@
             <p class="timeline__desc">自己理解を深化させ、自分の強みや価値観を言語化。キャリアの方向性を見つけます。</p>
             <img src="img/seminar-01.jpg" alt="セミナーの様子" class="timeline__img timeline__photo">
           </div>
-        </div>
-        <div class="timeline__item">
+        </li>
+        <li class="timeline__item">
           <div class="timeline__line">
-            <div class="timeline__dot">STEP2</div>
+            <div class="timeline__dot" lang="en">STEP2</div>
             <div class="timeline__connector"></div>
           </div>
           <div class="timeline__content">
@@ -178,10 +190,10 @@
             <p class="timeline__desc">専任のキャリアコンシェルジュが一人ひとりの強みを引き出し、キャリアプランを一緒に設計します。</p>
             <img src="img/consultation-01.jpg" alt="個別面談の様子" class="timeline__img timeline__photo">
           </div>
-        </div>
-        <div class="timeline__item">
+        </li>
+        <li class="timeline__item">
           <div class="timeline__line">
-            <div class="timeline__dot">STEP3</div>
+            <div class="timeline__dot" lang="en">STEP3</div>
             <div class="timeline__connector"></div>
           </div>
           <div class="timeline__content">
@@ -190,10 +202,10 @@
             <p class="timeline__note">＜参加企業例＞<br>IT企業、メーカー、サービス業など幅広い業種の企業</p>
             <img src="img/draft-meeting-01.jpg" alt="ドラフト会議の様子" class="timeline__img timeline__photo">
           </div>
-        </div>
-        <div class="timeline__item">
+        </li>
+        <li class="timeline__item">
           <div class="timeline__line">
-            <div class="timeline__dot">STEP4</div>
+            <div class="timeline__dot" lang="en">STEP4</div>
             <div class="timeline__connector"></div>
           </div>
           <div class="timeline__content">
@@ -201,13 +213,13 @@
             <p class="timeline__desc">希望の就労条件で企業とマッチング。キャリアコンシェルジュが応募をサポートします。</p>
             <img src="img/matching-01.jpg" alt="マッチングの様子" class="timeline__img timeline__photo">
           </div>
-        </div>
-        <div class="timeline__item">
+        </li>
+        <li class="timeline__item">
           <div class="timeline__line">
-            <div class="timeline__dot">STEP5</div>
+            <div class="timeline__dot" lang="en">STEP5</div>
           </div>
           <div class="timeline__content">
-            <h3 class="timeline__title">Rebloomプログラムによる就業後フォロー</h3>
+            <h3 class="timeline__title"><span lang="en">Rebloom</span>プログラムによる就業後フォロー</h3>
             <p class="timeline__desc">就業後もワークショップや個別コーチング、上長向け個別面談を通じて、安心して働き続けられる環境をサポートします。</p>
             <ul class="timeline__list">
               <li>実践スキル習得ワークショップ（計4回）<br><span class="timeline__list-sub">タイムマネジメント・シェアドリーダーシップ・ロジカルシンキング・プロアクティブ行動</span></li>
@@ -216,8 +228,8 @@
             </ul>
             <img src="img/followup-01.jpg" alt="フォローアップの様子" class="timeline__img timeline__photo">
           </div>
-        </div>
-      </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -348,11 +360,11 @@
       
     </div>
     <div class="footer__sns">
-      <a href="#" class="footer__sns-icon" aria-label="Instagram">Instagram</a>
-      <a href="#" class="footer__sns-icon" aria-label="Facebook">Facebook</a>
+      <span class="footer__sns-icon" aria-hidden="true" lang="en">Instagram</span>
+      <span class="footer__sns-icon" aria-hidden="true" lang="en">Facebook</span>
     </div>
     <p class="footer__org">主催：福岡県　運営：Work Step株式会社 / NPO法人ママワーク研究所</p>
-    <p class="footer__copyright">Copyright &copy; 2026 キャリア・リデザイン福岡 All Rights Reserved.</p>
+    <p class="footer__copyright"><span lang="en">Copyright</span> &copy; 2026 キャリア・リデザイン福岡 <span lang="en">All Rights Reserved.</span></p>
   </div>
 </footer>
 
@@ -368,15 +380,21 @@
 (function() {
   const slides = document.querySelectorAll('.hero__slide');
   const dots = document.querySelectorAll('.hero__dot');
+  const pauseBtn = document.querySelector('.hero__pause');
+  const statusEl = document.getElementById('hero-slide-status');
   let current = 0;
   let timer;
+  let paused = false;
 
   function goTo(index) {
     slides[current].classList.remove('hero__slide--active');
     dots[current].classList.remove('hero__dot--active');
+    dots[current].setAttribute('aria-pressed', 'false');
     current = index;
     slides[current].classList.add('hero__slide--active');
     dots[current].classList.add('hero__dot--active');
+    dots[current].setAttribute('aria-pressed', 'true');
+    statusEl.textContent = 'スライド ' + (current + 1) + ' / ' + slides.length;
   }
 
   function next() {
@@ -384,18 +402,44 @@
   }
 
   function startTimer() {
+    clearInterval(timer);
     timer = setInterval(next, 5000);
+  }
+
+  function setPaused(value) {
+    paused = value;
+    if (paused) {
+      clearInterval(timer);
+      pauseBtn.setAttribute('aria-label', 'スライドショーを再生');
+      pauseBtn.setAttribute('aria-pressed', 'true');
+      pauseBtn.classList.add('hero__pause--paused');
+    } else {
+      startTimer();
+      pauseBtn.setAttribute('aria-label', 'スライドショーを一時停止');
+      pauseBtn.setAttribute('aria-pressed', 'false');
+      pauseBtn.classList.remove('hero__pause--paused');
+    }
   }
 
   dots.forEach(function(dot) {
     dot.addEventListener('click', function() {
-      clearInterval(timer);
       goTo(Number(this.dataset.slide));
-      startTimer();
+      if (!paused) {
+        startTimer();
+      }
     });
   });
 
-  startTimer();
+  pauseBtn.addEventListener('click', function() {
+    setPaused(!paused);
+  });
+
+  /* prefers-reduced-motion が有効なら初期状態で停止 */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setPaused(true);
+  } else {
+    startTimer();
+  }
 })();
 </script>
 </body>
