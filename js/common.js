@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.classList.add('is-active');
       mobileMenu.classList.add('is-open');
       hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'メニューを閉じる');
       document.body.style.overflow = 'hidden';
       if (menuLinks.length) menuLinks[0].focus();
     }
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.classList.remove('is-active');
       mobileMenu.classList.remove('is-open');
       hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'メニューを開く');
       document.body.style.overflow = '';
       hamburger.focus();
     }
