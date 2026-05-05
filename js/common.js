@@ -9,20 +9,57 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.querySelector('.mobile-menu');
 
   if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', function () {
-      const isOpen = this.classList.toggle('is-active');
-      mobileMenu.classList.toggle('is-open');
-      this.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    const menuLinks = Array.from(mobileMenu.querySelectorAll('a'));
+
+    function openMenu() {
+      hamburger.classList.add('is-active');
+      mobileMenu.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      if (menuLinks.length) menuLinks[0].focus();
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove('is-active');
+      mobileMenu.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      hamburger.focus();
+    }
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.contains('is-active') ? closeMenu() : openMenu();
     });
 
-    mobileMenu.querySelectorAll('a').forEach(link => {
+    /* メニュー内リンクをクリックで閉じる（ページ遷移するためfocus戻し不要） */
+    menuLinks.forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('is-active');
         mobileMenu.classList.remove('is-open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
+    });
+
+    /* Escキーで閉じる */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
+
+    /* フォーカストラップ: 先頭↔末尾をループ */
+    mobileMenu.addEventListener('keydown', e => {
+      if (e.key !== 'Tab' || !menuLinks.length) return;
+      const first = menuLinks[0];
+      const last  = menuLinks[menuLinks.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     });
   }
 
