@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const animateCounter = (element) => {
     const target = parseInt(element.getAttribute('data-target'), 10);
     const duration = 2000;
+    element.textContent = '0'; // アニメーション開始前に0にリセット（JS無効時は実値を表示）
     const start = performance.now();
 
     const update = (now) => {
