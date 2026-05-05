@@ -78,9 +78,9 @@ body {
 }
 
 /* 全インタラクティブ要素の統一フォーカス指示子（キーボード操作時のみ表示） */
-:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 3px;
+*:focus-visible {
+  outline: 3px solid #005C52;
+  outline-offset: 2px;
 }
 
 /* スキップナビ: primary 背景上のため白アウトライン */
