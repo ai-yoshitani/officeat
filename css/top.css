@@ -30,6 +30,12 @@
   transition: opacity 1s ease-in-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide {
+    transition: none;
+  }
+}
+
 .hero__slide--active {
   opacity: 1;
 }

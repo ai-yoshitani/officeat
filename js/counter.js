@@ -27,6 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const counters = document.querySelectorAll('.js-counter');
   if (!counters.length) return;
 
+  /* アニメーション無効設定の場合は即座に最終値を表示してアニメーションをスキップ */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'), 10);
+      counter.textContent = target.toLocaleString();
+    });
+    return;
+  }
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
