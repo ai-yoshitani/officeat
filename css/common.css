@@ -658,3 +658,67 @@ body {
     transform: rotate(0deg);
   }
 }
+
+/* ============================================
+   Coming Soon Modal
+   ============================================ */
+.coming-soon-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-modal[hidden] {
+  display: none;
+}
+
+.coming-soon-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.coming-soon-modal__box {
+  position: relative;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+  width: min(320px, calc(100vw - 32px));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.coming-soon-modal__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.coming-soon-modal__text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.coming-soon-modal__close {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.coming-soon-modal__close:hover {
+  background-color: var(--color-primary-dark);
+}

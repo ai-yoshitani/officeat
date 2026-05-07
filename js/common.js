@@ -105,4 +105,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* --- Coming Soon モーダル --- */
+  const comingSoonPaths = ['/company/index.html', '/reskill/index.html'];
+
+  /* モーダルをDOMに生成 */
+  const modal = document.createElement('div');
+  modal.id = 'coming-soon-modal';
+  modal.className = 'coming-soon-modal';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-labelledby', 'coming-soon-title');
+  modal.setAttribute('hidden', '');
+  modal.innerHTML = `
+    <div class="coming-soon-modal__overlay"></div>
+    <div class="coming-soon-modal__box">
+      <p id="coming-soon-title" class="coming-soon-modal__title" lang="en">Coming Soon</p>
+      <p class="coming-soon-modal__text">このページは現在準備中です。<br>もうしばらくお待ちください。</p>
+      <button class="coming-soon-modal__close" aria-label="閉じる">閉じる</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const modalOverlay = modal.querySelector('.coming-soon-modal__overlay');
+  const modalClose   = modal.querySelector('.coming-soon-modal__close');
+  let lastFocused    = null;
+
+  function openComingSoon() {
+    lastFocused = document.activeElement;
+    modal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    modalClose.focus();
+  }
+
+  function closeComingSoon() {
+    modal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  modalOverlay.addEventListener('click', closeComingSoon);
+  modalClose.addEventListener('click', closeComingSoon);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeComingSoon();
+  });
+
+  /* coming soon 対象リンクにクリックイベントを付与 */
+  document.querySelectorAll('a').forEach(link => {
+    try {
+      const path = new URL(link.href, location.href).pathname;
+      if (comingSoonPaths.some(p => path.endsWith(p))) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          openComingSoon();
+        });
+      }
+    } catch (_) { /* 無効なhrefは無視 */ }
+  });
+
 });
