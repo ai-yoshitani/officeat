@@ -528,6 +528,24 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.footer__fukuoka {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.footer__fukuoka img {
+  height: 40px;
+  width: auto;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.footer__fukuoka a:hover img {
+  opacity: 1;
+}
+
 .footer__org {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
