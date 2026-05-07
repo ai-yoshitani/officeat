@@ -745,7 +745,7 @@ body {
   background-color: var(--color-white);
   color: var(--color-primary);
   border: 1.5px solid var(--color-primary);
-  margin: 24px auto 0;
+  margin: 24px auto 32px;
   display: flex;
   width: fit-content;
 }
