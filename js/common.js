@@ -130,23 +130,50 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose   = modal.querySelector('.coming-soon-modal__close');
   let lastFocused    = null;
 
+  /* モーダル外の主要要素（背景コンテンツ） */
+  const bgRegions = () => document.querySelectorAll('body > *:not(#coming-soon-modal)');
+
   function openComingSoon() {
     lastFocused = document.activeElement;
     modal.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
+    /* 背景コンテンツをスクリーンリーダーから隠す */
+    bgRegions().forEach(el => el.setAttribute('aria-hidden', 'true'));
     modalClose.focus();
   }
 
   function closeComingSoon() {
     modal.setAttribute('hidden', '');
     document.body.style.overflow = '';
+    /* 背景コンテンツを元に戻す */
+    bgRegions().forEach(el => el.removeAttribute('aria-hidden'));
     if (lastFocused) lastFocused.focus();
   }
 
   modalOverlay.addEventListener('click', closeComingSoon);
   modalClose.addEventListener('click', closeComingSoon);
+
+  /* Escキーで閉じる */
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeComingSoon();
+  });
+
+  /* フォーカストラップ: モーダル内の focusable 要素のみを循環 */
+  modal.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const focusable = Array.from(
+      modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+    ).filter(el => !el.disabled);
+    if (!focusable.length) { e.preventDefault(); return; }
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   });
 
   /* coming soon 対象リンクにクリックイベントを付与 */
