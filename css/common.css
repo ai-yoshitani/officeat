@@ -250,18 +250,8 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
   height: 64px;
 }
 
-/* 福岡県ロゴ */
-.header__fukuoka-logo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.header__fukuoka-logo img {
-  height: 56px;
-  width: auto;
-  display: block;
-  border: none;
+.header__logo {
+  margin-right: auto;
 }
 
 .header__logo a {
@@ -534,16 +524,22 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
   margin-bottom: 16px;
 }
 
+.footer__fukuoka a {
+  display: inline-flex;
+  background-color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: opacity 0.3s;
+}
+
 .footer__fukuoka img {
   height: 40px;
   width: auto;
   display: block;
-  opacity: 0.85;
-  transition: opacity 0.3s;
 }
 
-.footer__fukuoka a:hover img {
-  opacity: 1;
+.footer__fukuoka a:hover {
+  opacity: 0.85;
 }
 
 .footer__org {
