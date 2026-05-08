@@ -593,6 +593,7 @@ body {
 .label--course  { background-color: #FCE4EC; color: #8B2545; }          /* 旧 #E07B9B、#8B2545 on #FCE4EC = 6.4:1 */
 .label--info    { background-color: #666666; }                         /* 旧 #888888、白上 5.7:1 */
 .label--seminar { background-color: #8B5A00; }                         /* 旧 #F5A623、白上 5.9:1 */
+.label--student { background-color: #7B3F9E; }                         /* 受講生向け、白上 8.6:1 */
 
 /* --- Concept (スパイラル図) --- */
 .concept {
