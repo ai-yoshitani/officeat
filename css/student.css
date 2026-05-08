@@ -815,3 +815,14 @@
 .news__item--thumb:hover .news__title {
   color: var(--color-primary);
 }
+
+.news__more {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.news__more a {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
