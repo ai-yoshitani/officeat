@@ -620,12 +620,10 @@ body {
   color: var(--color-white);
 }
 
-.label--program { background-color: var(--color-primary); }           /* #006E66、白上 6.1:1 */
-.label--company { background-color: #3D5298; }                         /* 旧 #5B7FD6、白上 7.0:1 */
-.label--course  { background-color: #FCE4EC; color: #8B2545; }          /* 旧 #E07B9B、#8B2545 on #FCE4EC = 6.4:1 */
-.label--info    { background-color: #666666; }                         /* 旧 #888888、白上 5.7:1 */
-.label--seminar { background-color: #8B5A00; }                         /* 旧 #F5A623、白上 5.9:1 */
-.label--student { background-color: #7B3F9E; }                         /* 受講生向け、白上 8.6:1 */
+.label--student { background-color: #7B3F9E; }  /* 受講生向け */
+.label--company { background-color: #3D5298; }  /* 企業向け */
+.label--info    { background-color: #666666; }  /* お知らせ */
+.label--event   { background-color: #8B5A00; }  /* イベント */
 
 /* --- Concept (スパイラル図) --- */
 .concept {
