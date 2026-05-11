@@ -213,9 +213,10 @@
 }
 
 .timeline__date {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--color-text-light);
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 .timeline__desc {
