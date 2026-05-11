@@ -279,24 +279,31 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
 .header__pref {
   display: flex;
   align-items: center;
-  margin-right: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .header__pref a {
   display: inline-flex;
   align-items: center;
-  padding: 4px 6px;
+  padding: 3px 5px;
   background-color: var(--color-white);
   border-radius: 4px;
   transition: opacity 0.3s;
 }
 
 .header__pref img {
-  height: 32px;
+  height: 22px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+@media (min-width: 768px) {
+  .header__pref img {
+    height: 32px;
+  }
 }
 
 .header__pref a:hover {
