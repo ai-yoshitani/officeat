@@ -274,6 +274,32 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
   font-weight: 400;
 }
 
+/* ヘッダー内 福岡県ロゴ */
+.header__pref {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.header__pref a {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.header__pref img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.header__pref a:hover {
+  opacity: 0.8;
+}
+
 /* PC Nav */
 .header__nav {
   display: none;
@@ -560,6 +586,12 @@ h3 { font-size: 18px; font-weight: 700; line-height: 1.5; }
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 16px;
   line-height: 1.6;
+}
+
+.footer__org-host {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer__copyright {
