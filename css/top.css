@@ -391,6 +391,18 @@
   color: var(--color-primary);
 }
 
+.timeline__item--next .timeline__dot {
+  background-color: var(--color-accent);
+}
+
+.timeline__item--next .timeline__date {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
 .timeline__desc {
   font-size: 14px;
   color: var(--color-text-light);
