@@ -127,6 +127,45 @@
   margin-bottom: 24px;
 }
 
+/* --- 記事アイキャッチブロック --- */
+.article-eyecatch {
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 28px 24px 24px;
+  text-align: center;
+  margin-bottom: 32px;
+  background: var(--color-primary-light);
+}
+
+.article-eyecatch__logo img {
+  height: 28px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.article-eyecatch__catch {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 12px !important;
+}
+
+.article-eyecatch__event {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 16px !important;
+}
+
+.article-eyecatch__deadline {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #c0392b;
+  text-decoration: underline;
+  margin-bottom: 0 !important;
+}
+
 .article__body h2 {
   font-size: 17px;
   font-weight: 700;
