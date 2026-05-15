@@ -48,8 +48,7 @@
 }
 
 .info-list__title {
-  flex: 1;
-  min-width: 200px;
+  flex-basis: 100%;
 }
 
 .info-list__title a {
