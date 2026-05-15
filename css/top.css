@@ -306,6 +306,10 @@
   min-width: 100px;
 }
 
+.news__title {
+  flex-basis: 100%;
+}
+
 .news__title a {
   color: var(--color-text);
   transition: color 0.3s;
