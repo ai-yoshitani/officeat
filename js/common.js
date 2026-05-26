@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --- Coming Soon モーダル --- */
-  const comingSoonPaths = ['/company/index.html', '/reskill/index.html', '/forms/entry-company.html'];
+  const comingSoonPaths = ['/reskill/index.html', '/forms/entry-company.html'];
 
   /* モーダルをDOMに生成 */
   const modal = document.createElement('div');
