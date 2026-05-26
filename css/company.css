@@ -57,12 +57,256 @@
 
 .company-hero__sub {
   font-size: 15px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   opacity: 0.95;
-  max-width: 600px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ヒーロー上部の小バッジ */
+.company-hero__badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+/* ヒーロー内CTAボタン群 */
+.company-hero__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .company-hero__cta {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+/* 開催日注釈 */
+.company-hero__note {
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  border-radius: 6px;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-top: 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 720px;
+}
+
+/* ヒーロー用 btn--outline-white を company ページでも使えるよう定義 */
+.company-hero .btn--outline-white {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: var(--color-white);
+}
+
+.company-hero .btn--outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   KPI Bar
+   ============================================ */
+.company-kpi {
+  background: var(--color-primary-light);
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.company-kpi__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .company-kpi__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+.company-kpi__item {
+  text-align: center;
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 16px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.company-kpi__value {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .company-kpi__value {
+    font-size: 36px;
+  }
+}
+
+.company-kpi__unit,
+.company-kpi__num {
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.company-kpi__num {
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  .company-kpi__num {
+    font-size: 36px;
+  }
+}
+
+.company-kpi__label {
+  display: block;
+  font-size: 13px;
+  color: var(--color-text-light);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* ============================================
+   News (company 用 背景上書き)
+   ============================================ */
+.news--company-thumb {
+  background-color: var(--color-primary-light);
+}
+
+/* ============================================
+   About（キャリア・リデザイン福岡とは）
+   ============================================ */
+.company-about__lead {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.company-about__catch {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .company-about__catch {
+    font-size: 26px;
+  }
+}
+
+.company-about__body {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  color: var(--color-text);
+}
+
+.company-about__body p {
+  margin-bottom: 16px;
+}
+
+.company-about__body p:last-child {
+  margin-bottom: 0;
+}
+
+.company-about__highlight {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+.company-about__highlight p {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.company-about__highlight p:last-child {
+  margin-bottom: 0;
+}
+
+.company-about__highlight-note {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .company-about__highlight-note {
+    font-size: 18px;
+  }
+}
+
+.company-about__highlight-mark {
+  color: var(--color-primary);
+  margin: 0 6px;
+}
+
+/* ============================================
+   Issues（こんな採用課題、ありませんか？）
+   ============================================ */
+.company-issues {
+  background-color: var(--color-bg-gray);
+}
+
+.company-issues__lead {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-top: 24px;
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  padding: 12px 24px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+}
+
+@media (min-width: 768px) {
+  .company-issues__lead {
+    font-size: 17px;
+  }
+}
+
+.company-issues__lead::before {
+  content: '▶ ';
+  color: var(--color-primary);
 }
 
 /* --- Check List --- */
@@ -86,233 +330,319 @@
   margin-top: 2px;
 }
 
-/* --- Merit --- */
-.merit {
-  background-color: var(--color-bg-gray);
-}
-
-.merit__cards {
+/* ============================================
+   4つの魅力（appeals）
+   ============================================ */
+.appeals__cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-@media (min-width: 768px) {
-  .merit__cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.merit-card {
-  background: var(--color-white);
-  border-radius: 12px;
-  padding: 28px 24px;
-  text-align: center;
-  border-top: 4px solid var(--color-primary);
-}
-
-.merit-card__icon {
-  width: 56px;
-  height: 56px;
-  color: var(--color-primary);
-  margin: 0 auto 12px;
-}
-
-.merit-card__icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.merit-card__number {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.merit-card__title {
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.merit-card__desc {
-  font-size: 14px;
-  color: var(--color-text-light);
-  text-align: left;
-}
-
-/* --- Flow --- */
-.company-flow__steps {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .company-flow__steps {
+@media (min-width: 640px) {
+  .appeals__cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .company-flow__steps {
-    grid-template-columns: repeat(3, 1fr);
+  .appeals__cards {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.flow-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  background: var(--color-bg-gray);
+.appeal-card {
+  position: relative;
+  background: var(--color-white);
   border-radius: 12px;
-  padding: 20px;
-}
-
-.flow-step__num {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.flow-step__icon {
-  width: 32px;
-  height: 32px;
-  color: var(--color-primary);
-  flex-shrink: 0;
-}
-
-.flow-step__icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.flow-step__text {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* --- Satisfaction --- */
-.satisfaction {
-  background-color: var(--color-primary-light);
+  padding: 32px 20px 24px;
   text-align: center;
+  border-top: 4px solid var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.satisfaction__icon {
+.appeal-card__label {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.appeal-card__num {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.appeal-card__icon {
   width: 64px;
   height: 64px;
   color: var(--color-primary);
-  margin: 0 auto 8px;
+  margin: 0 auto 14px;
 }
 
-.satisfaction__icon svg {
+.appeal-card__icon svg {
   width: 100%;
   height: 100%;
 }
 
-.satisfaction__number {
-  font-size: 64px;
+.appeal-card__title {
+  font-size: 16px;
   font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.2;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: var(--color-primary-dark);
 }
 
-.satisfaction__unit {
-  font-size: 24px;
-}
-
-.satisfaction__label {
-  font-size: 18px;
-  font-weight: 700;
-  margin-top: 8px;
-  margin-bottom: 24px;
-}
-
-.satisfaction__reasons {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.satisfaction__reasons li {
-  padding: 8px 0;
+.appeal-card__desc {
   font-size: 14px;
-  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-light);
+  text-align: left;
+  line-height: 1.7;
 }
 
-.satisfaction__reasons li::before {
-  content: '\2713';
-  margin-right: 8px;
-  color: var(--color-primary);
+/* ============================================
+   Flow（マッチングの仕組み）
+   ============================================ */
+.company-flow {
+  background-color: var(--color-bg-gray);
 }
 
-/* --- Company Voices --- */
-.company-voices__cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+.company-flow__lead {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 36px;
 }
 
 @media (min-width: 768px) {
-  .company-voices__cards {
-    grid-template-columns: repeat(2, 1fr);
+  .company-flow__lead {
+    font-size: 18px;
   }
 }
 
-/* --- Download --- */
-.download {
-  background-color: var(--color-bg-gray);
-  text-align: center;
+.company-flow__note {
+  max-width: 720px;
+  margin: 32px auto 0;
+  background: var(--color-white);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  padding: 20px 24px;
 }
 
-.download__icon {
-  width: 56px;
-  height: 56px;
-  color: var(--color-primary);
-  margin: 0 auto 16px;
+.company-flow__note-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
 }
 
-.download__icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.download__desc {
-  margin-bottom: 24px;
+.company-flow__note p {
+  font-size: 14px;
   color: var(--color-text-light);
+  line-height: 1.8;
+  margin: 0;
 }
 
-/* --- Apply --- */
-.company-apply__cards {
+/* ============================================
+   Talents（出会える人材像）
+   ============================================ */
+.talents__cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  max-width: 600px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .company-apply__cards {
+  .talents__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.talent-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.talent-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.talent-card__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talent-card__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.talent-card__body {
+  flex: 1;
+}
+
+.talent-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.talent-card__desc {
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================
+   Benefits（企業にとってのメリット）
+   ============================================ */
+.company-benefits {
+  background-color: var(--color-bg-gray);
+}
+
+.check-list--card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.check-list--card .check-list__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.check-list--card .check-list__item:last-child {
+  border-bottom: none;
+}
+
+/* ============================================
+   Final CTA（緑帯）
+   ============================================ */
+.company-final {
+  background-color: var(--color-primary-light);
+}
+
+.company-final__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.company-final__badge {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+}
+
+.company-final__lead {
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.company-final__heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .company-final__heading {
+    font-size: 28px;
+  }
+}
+
+.company-final__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .company-final__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.company-final-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 28px 24px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company-final-card__voice {
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+
+.company-final-card__icon {
+  width: 56px;
+  height: 56px;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.company-final-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.company-final-card__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
+}
+
+.company-final-card__note {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.company-final-card .btn {
+  width: 100%;
+  max-width: 240px;
 }
