@@ -65,20 +65,6 @@
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* ヒーロー上部の小バッジ */
-.company-hero__badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
-  color: var(--color-white);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 5px 14px;
-  border-radius: 999px;
-  margin-bottom: 18px;
-}
-
 /* ヒーロー内CTAボタン群 */
 .company-hero__cta {
   display: flex;
@@ -242,18 +228,8 @@
   max-width: 760px;
   margin: 0 auto;
   background: var(--color-primary-light);
-  border-left: 4px solid var(--color-primary);
   border-radius: 8px;
-  padding: 20px 24px;
-}
-
-.company-about__highlight p {
-  margin-bottom: 12px;
-  font-size: 14px;
-}
-
-.company-about__highlight p:last-child {
-  margin-bottom: 0;
+  padding: 16px 24px;
 }
 
 .company-about__highlight-note {
@@ -262,6 +238,7 @@
   font-size: 16px;
   color: var(--color-primary-dark);
   letter-spacing: 0.02em;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -519,17 +496,35 @@
 }
 
 /* ============================================
-   Benefits（企業にとってのメリット）
+   Talents 内 企業メリット補足
    ============================================ */
-.company-benefits {
-  background-color: var(--color-bg-gray);
+.talents__benefits {
+  max-width: 760px;
+  margin: 40px auto 0;
+  background: var(--color-primary-light);
+  border-radius: 12px;
+  padding: 24px 24px 20px;
+}
+
+.talents__benefits-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .talents__benefits-title {
+    font-size: 17px;
+  }
 }
 
 .check-list--card {
   background: var(--color-white);
-  border-radius: 12px;
-  padding: 20px 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .check-list--card .check-list__item {
@@ -553,31 +548,19 @@
   text-align: center;
 }
 
-.company-final__badge {
-  display: inline-block;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-size: 12px;
+.company-final__heading {
+  font-size: 22px;
   font-weight: 700;
-  padding: 5px 16px;
-  border-radius: 999px;
-  letter-spacing: 0.05em;
-  margin-bottom: 18px;
+  color: var(--color-primary-dark);
+  margin-bottom: 16px;
+  line-height: 1.5;
 }
 
 .company-final__lead {
   font-size: 14px;
   color: var(--color-text);
-  margin-bottom: 18px;
-  line-height: 1.8;
-}
-
-.company-final__heading {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--color-primary-dark);
   margin-bottom: 32px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 @media (min-width: 768px) {
