@@ -252,6 +252,87 @@
   margin: 0 6px;
 }
 
+/* 対象（誰のための事業か） */
+.company-about__target {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 4px;
+}
+
+.company-about__target-label {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.company-about__target-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .company-about__target-text {
+    font-size: 17px;
+  }
+}
+
+/* 4つの魅力タイトル一覧（簡易） */
+.company-about__appeals {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .company-about__appeals {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.company-about__appeal {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.company-about__appeal-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.company-about__appeal-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--color-primary-dark);
+}
+
 /* ============================================
    Issues（こんな採用課題、ありませんか？）
    ============================================ */
