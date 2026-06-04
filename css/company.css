@@ -298,20 +298,18 @@
   padding-bottom: 32px;
 }
 
-/* 見出し＋イラスト */
+/* 見出し＋イラスト（イラストは見出し上の行に中央配置） */
 .company-appeals-intro__head {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 24px;
 }
 
 .company-appeals-intro__illust {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  color: var(--color-primary);
+  width: 60px;
+  height: 60px;
 }
 
 .company-appeals-intro__illust svg {
