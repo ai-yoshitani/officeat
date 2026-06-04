@@ -339,11 +339,11 @@
   background: var(--color-primary);
 }
 
-/* 各魅力のピクトグラム */
+/* 各魅力のピクトグラム（魅力01と同色・小さめに統一） */
 .company-appeals-intro__icon {
-  width: 56px;
-  height: 56px;
-  margin: 4px auto;
+  width: 38px;
+  height: 38px;
+  margin: 2px auto;
   color: var(--color-primary);
 }
 
