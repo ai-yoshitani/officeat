@@ -298,29 +298,6 @@
   padding-bottom: 32px;
 }
 
-/* 見出し＋イラスト（イラストは見出し上の行に中央配置） */
-.company-appeals-intro__head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.company-appeals-intro__illust {
-  width: 60px;
-  height: 60px;
-}
-
-.company-appeals-intro__illust svg {
-  width: 100%;
-  height: 100%;
-}
-
-.company-appeals-intro__title-main {
-  margin: 0;
-}
-
 .company-appeals-intro__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -355,12 +332,24 @@
   align-self: center;
   font-size: 13px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-white);
   letter-spacing: 0.05em;
-  border: 1.5px solid var(--color-primary);
   border-radius: 999px;
-  padding: 3px 12px;
-  background: var(--color-white);
+  padding: 4px 14px;
+  background: var(--color-primary);
+}
+
+/* 各魅力のピクトグラム */
+.company-appeals-intro__icon {
+  width: 56px;
+  height: 56px;
+  margin: 4px auto;
+  color: var(--color-primary);
+}
+
+.company-appeals-intro__icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .company-appeals-intro__title {
